@@ -34,9 +34,6 @@
 
 
     <div class="content">
-        ..
-    </div>
-    <div class="content">
     <table border="1">
         <tr>
             <th>Ячейка 1</th>
