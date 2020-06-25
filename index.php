@@ -7,21 +7,47 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <title>Готовый WEB-сайт </title>
+    <style>
+        table {
+            width: 100%; /* Ширина таблицы */
+            background: white; /* Цвет фона таблицы */
+            color: white; /* Цвет текста */
+            border-spacing: 1px; /* Расстояние между ячейками */
+        }
+        td, th {
+            background: maroon; /* Цвет фона ячеек */
+            padding: 5px; /* Поля вокруг текста */
+        }
+    </style>
 </head>
 <body>
 
     <?php require "blocks/header.php" ?>
 
-<table border="1">
-    <tr>
-        <th>Ячейка 1</th>
-        <th>Ячейка 2</th>
-    </tr>
-    <tr>
-        <td>Ячейка 3</td>
-        <td>Ячейка 4</td>
-    </tr>
-</table>
+
+    <div class="sidebar">
+        <a class="active" href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div>
+
+
+    <div class="content">
+        ..
+    </div>
+    <div class="content">
+    <table border="1">
+        <tr>
+            <th>Ячейка 1</th>
+            <th>Ячейка 2</th>
+        </tr>
+        <tr>
+            <td>Ячейка 3</td>
+            <td>Ячейка 4</td>
+        </tr>
+    </table>
+    </div>
 
     <?php require "blocks/footer.php" ?>
 
