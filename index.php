@@ -24,12 +24,13 @@
 
     <?php require "blocks/header.php" ?>
 
+<!--     -->
 
     <div class="sidebar">
-        <a class="active" href="#home">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
+        <a class="active" href="#">Основная таблицв</a>
+        <a href="#">Отправить файл</a>
+        <a href="#">Мои файлы</a>
+        <a href="#">Полученные файлы</a>
     </div>
 
 
