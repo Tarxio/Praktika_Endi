@@ -117,7 +117,7 @@ div.content {
     box-shadow: 0 1px 3px rgba(0,0,0,.13);
 }
 
-#welcome {
+.welcome {
     width: 500px;
     padding: 30px;
     background: #fff;
@@ -140,7 +140,7 @@ div.content {
     font-size: 14px;
 }
 
-#login {
+.login {
     width: 320px;
     margin: auto;
     padding-bottom: 15px;
@@ -167,7 +167,7 @@ div.content {
 .button{
     border: solid 1px #da7c0c;
     background: #f78d1d;
-    background: -webkit-gradient(linear, left top, leftbottom, from(#faa51a), to(#f47a20));
+    background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
     background: -moz-linear-gradient(top,  #faa51a, #f47a20);
     filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
     color: #fff;
@@ -181,7 +181,7 @@ div.content {
 
 .button:hover{
     background: #f47c20;
-    background: -webkit-gradient(linear, left top, leftbottom, from(#f88e11), to(#f06015));
+    background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
     background: -moz-linear-gradient(top,  #f88e11, #f06015);
     filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
 }

@@ -1,4 +1,11 @@
-<?php require 'auth.php'; $login = getUserLogin(); ?>
+<?php
+
+session_start();
+
+if(!isset($_SESSION["session_username"])):
+    header("location:login.php");
+else:
+?>
 <!DOCTYPE html>
 <head>
 </head>
@@ -15,15 +22,11 @@
             <a class="blog-header-logo text-dark" href="#">ENDI</a>
         </div>
         <div class="col-4 d-flex justify-content-end align-items-center">
-        <?php if ($login === null): ?>
-            <a class="btn btn-sm btn-outline-secondary" href="login.php">Sign up</a>
-        <?php else: ?>
-            Доброй пожаловать, <?= $login ?>
-            <br>
-            <a class="btn btn-sm btn-outline-secondary" href="logout.php">Exit</a>
-         <?php endif; ?>
+                <h2>Добро пожаловать, <span><?php echo $_SESSION['session_username'];?>! </span></h2>
+                <p><a href="logout.php">Выйти</a> из системы</p>
         </div>
     </div>
+    <?php endif; ?>
 </header>
 </body>
 </html>

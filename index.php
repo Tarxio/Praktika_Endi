@@ -24,7 +24,8 @@
 
     <?php require "blocks/header.php" ?>
 
-<!--     -->
+
+<!--   Перенос всех файлов, отвечающих за авт+рег в тест агарио, создание-->
 
     <div class="sidebar">
         <a class="active" href="#">Основная таблицв</a>
