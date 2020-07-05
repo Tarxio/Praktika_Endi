@@ -25,27 +25,27 @@
     <?php require "blocks/header.php" ?>
 
 
-<!--   Перенос всех файлов, отвечающих за авт+рег в тест агарио, создание-->
+<!--   -->
 
     <div class="sidebar">
-        <a class="active" href="#">Основная таблицв</a>
-        <a href="#">Отправить файл</a>
-        <a href="#">Мои файлы</a>
-        <a href="#">Полученные файлы</a>
+        <a class="active" href="index.php">Основная таблица</a>
+        <a href="download.php">Отправить файл</a>
+        <a href="MyFile.php">Мои файлы</a>
+        <a href="LoadingFile.php">Полученные файлы</a>
     </div>
 
 
     <div class="content">
     <table border="1">
-        <tr>
-            <th>Ячейка 1</th>
-            <th>Ячейка 2</th>
-        </tr>
-        <tr>
-            <td>Ячейка 3</td>
-            <td>Ячейка 4</td>
-        </tr>
-    </table>
+        <?php for($i = 0; $i < count($data); $i++): ?>
+            <tr>
+                <th><a href="../public/media/<?=$data[$i]['media']?>" download="file">
+                        <object data="../public/media/<?=$data[$i]['media']?>" width="104" height="142">
+                    </a>
+                    <p><?=$data[$i]['title']?></p></th>
+                <th><?=$data[$i]['title']?></th>
+            </tr>
+        <?php endfor; ?>
     </div>
 
     <?php require "blocks/footer.php" ?>
