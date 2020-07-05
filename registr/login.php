@@ -7,7 +7,7 @@ session_start();
 
 if(isset($_SESSION["session_username"])){
     // вывод "Session is set"; // в целях проверки
-    header("Location: /index.php");
+    header("Location: http://localhost:8888/Praktika_Endi/index.php");
 }
 
 if(isset($_POST["login"])){
@@ -31,7 +31,7 @@ if(isset($_POST["login"])){
                 //  session_start();
                 $_SESSION['session_username']=$username;
                 /* Перенаправление браузера */
-                header("Location: /index.php");
+                header("Location: http://localhost:8888/Praktika_Endi/index.php");
             }
         } else {
             //  $message = "Invalid username or password!";
