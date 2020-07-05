@@ -3,7 +3,7 @@
 session_start();
 
 if(!isset($_SESSION["session_username"])):
-    header("location:login.php");
+    header("location: login.php");
 else:
 ?>
 <!DOCTYPE html>
@@ -23,7 +23,7 @@ else:
         </div>
         <div class="col-4 d-flex justify-content-end align-items-center">
                 <h2>Добро пожаловать, <span><?php echo $_SESSION['session_username'];?>! </span></h2>
-                <p><a href="logout.php">Выйти</a> из системы</p>
+                <p><a href="registr/logout.php">Выйти</a> из системы</p>
         </div>
     </div>
     <?php endif; ?>

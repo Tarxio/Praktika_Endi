@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <title>Готовый WEB-сайт </title>
     <style>
@@ -37,15 +37,15 @@
 
     <div class="content">
     <table border="1">
-        <?php for($i = 0; $i < count($data); $i++): ?>
-            <tr>
-                <th><a href="../public/media/<?=$data[$i]['media']?>" download="file">
-                        <object data="../public/media/<?=$data[$i]['media']?>" width="104" height="142">
-                    </a>
-                    <p><?=$data[$i]['title']?></p></th>
-                <th><?=$data[$i]['title']?></th>
-            </tr>
-        <?php endfor; ?>
+        <tr>
+            <th>Ячейка 1</th>
+            <th>Ячейка 2</th>
+        </tr>
+        <tr>
+            <td>Ячейка 3</td>
+            <td>Ячейка 4</td>
+        </tr>
+    </table>
     </div>
 
     <?php require "blocks/footer.php" ?>
