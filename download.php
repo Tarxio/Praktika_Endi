@@ -12,6 +12,7 @@
 
     <?php require "blocks/header.php" ?>
 
+
     <div class="sidebar">
         <a href="index.php">Основная таблица</a>
         <a class="active" href="download.php">Отправить файл</a>
@@ -22,12 +23,32 @@
 
 
     <div class="content">
-        <form method='post' action="file.php" enctype="multipart/form-data">
-            <input type="hidden" name="MAX_FILE_SIZE" value="5000000">
-            <input type='file' name='file[]' class='file-drop' id='file-drop' multiple required><br>
-            <input type='submit' value='Загрузить' >
+        <form action="send.php" method="post" enctype="multipart/form-data" class="form-control">
+            <input type="text" name="title">
+            <label>Имя файла</label>
+            <input type="File" name="file">
+            <input type="hidden" name="date" id="hiddenField" value="true" />
+            <br><br>
+            <label>Имя получателя</label>
+            <label>
+                    <?php
+                    mysqli_connect('localhost:8889', 'root', 'root');
+                    mysqli_select_db('userlistdb');
+
+                    $sql = "SELECT  full_name FROM usertbl";
+                    $result = mysqli_query($sql);
+
+                    echo "<select name='full_name'><option></option>";
+                    while ($row = mysqli_fetch_array($result)) {
+                        echo "<option value='" . $row['full_name'] . "'>" . $row['full_name'] . "</option>";
+                    }
+                    echo "</select>";
+                    ?>
+
+            </label>
+            <br>
+            <input type="submit" name="submit" class="btn" value="Отправить">
         </form>
-        <div class='message-div message-div_hidden' id='message-div'></div>
     </div>
 
     <?php require "blocks/footer.php" ?>

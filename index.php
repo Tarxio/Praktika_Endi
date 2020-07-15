@@ -1,3 +1,8 @@
+<?php
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,16 +41,17 @@
 
 
     <div class="content">
-    <table border="1">
-        <tr>
-            <th>Ячейка 1</th>
-            <th>Ячейка 2</th>
-        </tr>
-        <tr>
-            <td>Ячейка 3</td>
-            <td>Ячейка 4</td>
-        </tr>
-    </table>
+        <table>
+            <?php for($i = 0; $i < count($data); $i++): ?>
+                <tr>
+                    <th><a>" download="file">
+                            <object data="../public/media/<?=$data[$i]['media']?>" width="104" height="142">
+                        </a>
+                        <p><?=$data[$i]['title']?></p></th>
+                    <th><?=$data[$i]['title']?></th>
+                </tr>
+            <?php endfor; ?>
+        </table>
     </div>
 
     <?php require "blocks/footer.php" ?>
